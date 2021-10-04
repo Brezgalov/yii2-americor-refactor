@@ -2,13 +2,13 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=americor-mysql;dbname=americor-test',
-    'username' => 'root',
-    'password' => 'root',
-    'charset' => 'utf8',
-
-    // Schema cache options (for production environment)
-    //'enableSchemaCache' => true,
-    //'schemaCacheDuration' => 60,
-    //'schemaCache' => 'cache',
+    'dsn' => sprintf(
+        'mysql:host=%s;port=%s;dbname=%s',
+        $_ENV['DB_HOST'],
+        $_ENV['DB_PORT'],
+        $_ENV['DB_NAME']
+    ),
+    'username' => $_ENV['DB_USER'],
+    'password' => $_ENV['DB_PASS'],
+    'charset' => 'utf8mb4',
 ];
