@@ -3,6 +3,9 @@
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
+// название компонента - как есть
+defined('historyTBBuilder') or define('historyTBBuilder', 'historyTBBuilder');
+
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
@@ -13,6 +16,9 @@ $config = [
     ],
     'name' => 'Americor Test',
     'components' => [
+        // Сборщик текста для History
+        historyTBBuilder => require __DIR__ . '/services/HistoryTBBuilderService.php',
+
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => $_ENV['APP_KEY'],
