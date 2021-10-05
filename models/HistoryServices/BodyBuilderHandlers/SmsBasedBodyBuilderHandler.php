@@ -3,9 +3,9 @@
 namespace app\models\HistoryServices\BodyBuilderHandlers;
 
 use app\models\History;
-use app\models\HistoryServices\BodyBuilderHandlers\Base\TypedBodyBuilderHandler;
+use app\models\services\HandlersListedService\TypedHistoryHandler;
 
-class SmsBasedBodyBuilderHandler extends TypedBodyBuilderHandler
+class SmsBasedBodyBuilderHandler extends TypedHistoryHandler
 {
     /**
      * @var array

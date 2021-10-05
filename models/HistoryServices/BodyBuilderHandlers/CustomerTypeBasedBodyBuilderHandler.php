@@ -4,9 +4,9 @@ namespace app\models\HistoryServices\BodyBuilderHandlers;
 
 use app\models\Customer;
 use app\models\History;
-use app\models\HistoryServices\BodyBuilderHandlers\Base\TypedBodyBuilderHandler;
+use app\models\services\HandlersListedService\TypedHistoryHandler;
 
-class CustomerTypeBasedBodyBuilderHandler extends TypedBodyBuilderHandler
+class CustomerTypeBasedBodyBuilderHandler extends TypedHistoryHandler
 {
     /**
      * @var array
