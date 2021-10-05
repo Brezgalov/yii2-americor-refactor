@@ -3,7 +3,6 @@
 namespace app\models\HistoryServices;
 
 use app\models\History;
-use app\models\HistoryServices\BodyBuilderHandlers\Base\IBodyBuilderHandler;
 use app\models\services\HandlersListedService;
 
 /**
@@ -31,14 +30,14 @@ class TextBodyBuilderService extends HandlersListedService
 
     /**
      * @param $handler
-     * @return IBodyBuilderHandler|HandlersListedService\IHandler|mixed
+     * @return HandlersListedService\IHistoryHandler|HandlersListedService\IHandler|mixed
      * @throws \yii\base\InvalidConfigException
      */
     protected function prepareHandler($handler)
     {
         $handler = parent::prepareHandler($handler);
 
-        if ($this->historyTmp && $handler instanceof IBodyBuilderHandler) {
+        if ($this->historyTmp && $handler instanceof HandlersListedService\IHistoryHandler) {
             $handler->setHistory($this->historyTmp);
         }
 

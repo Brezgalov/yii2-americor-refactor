@@ -3,6 +3,7 @@
 namespace app\models\HistoryServices\BodyBuilderHandlers\Base;
 
 use app\models\History;
+use app\models\services\HandlersListedService\IHistoryHandler;
 use yii\base\Model;
 
 /**
@@ -11,7 +12,7 @@ use yii\base\Model;
  *
  * @package app\models\HistoryServices\BodyBuilderHandlers\Base
  */
-abstract class BasicBodyBuilderHandler extends Model implements IBodyBuilderHandler
+abstract class BasicBodyBuilderHandler extends Model implements IHistoryHandler
 {
     /**
      * @var History

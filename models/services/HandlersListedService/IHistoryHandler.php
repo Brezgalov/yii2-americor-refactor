@@ -1,17 +1,16 @@
 <?php
 
-namespace app\models\HistoryServices\BodyBuilderHandlers\Base;
+namespace app\models\services\HandlersListedService;
 
 use app\models\History;
-use app\models\services\HandlersListedService\IHandler;
 
 /**
- * Interface IBodyBuilderHandler
+ * Interface IHistoryHandler
  * Благодаря интерфейсу можно использовать в кач-ве Handler какую угодно модель
  *
- * @package app\models\HistoryServices\BodyBuilderHandlers\Base
+ * @package app\models\services\HandlersListedService;
  */
-interface IBodyBuilderHandler extends IHandler
+interface IHistoryHandler extends IHandler
 {
     /**
      * @param History $history
