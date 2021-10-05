@@ -2,7 +2,7 @@
 
 namespace app\models\HistoryServices\BodyBuilderHandlers;
 
-use app\models\HistoryServices\BodyBuilderHandlers\Base\BasicBodyBuilderHandler;
+use app\models\services\HandlersListedService\BasicHistoryHandler;
 
 /**
  * Class DefaultBodybuilderHandler
@@ -10,7 +10,7 @@ use app\models\HistoryServices\BodyBuilderHandlers\Base\BasicBodyBuilderHandler;
  *
  * @package app\models\HistoryServices\BodyBuilderHandlers
  */
-class DefaultBodyBuilderHandler extends BasicBodyBuilderHandler
+class DefaultBodyBuilderHandler extends BasicHistoryHandler
 {
     /**
      * @return string

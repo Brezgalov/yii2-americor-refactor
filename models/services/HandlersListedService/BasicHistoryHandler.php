@@ -1,18 +1,17 @@
 <?php
 
-namespace app\models\HistoryServices\BodyBuilderHandlers\Base;
+namespace app\models\services\HandlersListedService;
 
 use app\models\History;
-use app\models\services\HandlersListedService\IHistoryHandler;
 use yii\base\Model;
 
 /**
- * Class BasicBodyBuilderHandler
+ * Class BasicHistoryHandler
  * Избавляет от необходимости дублирования кода в однотипных Handler
  *
- * @package app\models\HistoryServices\BodyBuilderHandlers\Base
+ * @package app\models\services\HandlersListedService
  */
-abstract class BasicBodyBuilderHandler extends Model implements IHistoryHandler
+abstract class BasicHistoryHandler extends Model implements IHistoryHandler
 {
     /**
      * @var History

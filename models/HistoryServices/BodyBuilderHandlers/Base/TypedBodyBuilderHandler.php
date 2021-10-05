@@ -2,7 +2,9 @@
 
 namespace app\models\HistoryServices\BodyBuilderHandlers\Base;
 
-abstract class TypedBodyBuilderHandler extends BasicBodyBuilderHandler
+use app\models\services\HandlersListedService\BasicHistoryHandler;
+
+abstract class TypedBodyBuilderHandler extends BasicHistoryHandler
 {
     /**
      * @var array
