@@ -92,6 +92,21 @@ class History extends ActiveRecord
     }
 
     /**
+     * @return array
+     */
+    public function getObjectTraitRelations()
+    {
+        return [
+            Customer::class,
+            Sms::class,
+            Task::class,
+            Call::class,
+            Fax::class,
+            User::class,
+        ];
+    }
+
+    /**
      * @return ActiveQuery
      */
     public function getCustomer()
