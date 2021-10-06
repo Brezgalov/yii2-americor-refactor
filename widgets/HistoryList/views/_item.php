@@ -1,13 +1,19 @@
 <?php
+
 use app\models\Call;
 use app\models\Customer;
 use app\models\History;
 use app\models\search\HistorySearch;
 use app\models\Sms;
+use app\widgets\HistoryList\helpers\HistoryItemRenderer;
 use app\widgets\HistoryList\helpers\HistoryListHelper;
 use yii\helpers\Html;
 
 /** @var $model HistorySearch */
+/* @var $itemRenderer HistoryItemRenderer */
+
+$itemRenderer->setView($this);
+
 
 switch ($model->event) {
     case History::EVENT_CREATED_TASK:
